@@ -51,3 +51,20 @@ with **'use client'** directive at the top of the component we can make it clien
 
 1. client-side
 2. server-side
+
+## Chching
+
+storing data somewhere that is faster to access. Next.js automatically store the result in its data cache which is based on the file system
+
+1. Memory
+2. file system
+3. Network
+
+``` js
+    const res = await fetch('https://jsonplaceholder.typicode.com/users', {
+        cache: 'no-store', // if Data changes frequently
+        next: {
+            revalidate: 10, // get fresh data every 10 seconds
+        }
+    });
+```
