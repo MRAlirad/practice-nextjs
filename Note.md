@@ -79,3 +79,22 @@ const res = await fetch('https://jsonplaceholder.typicode.com/users', {
 2. Server-side
     - Static (at build time)
     - Dynamic (at request time)
+
+# Routing and Navigation
+
+## What you'll learn
+
+1. Define Dynamic routes
+2. Access route and query stirng parameters
+3. Create layouts
+4. Show loading UIs
+5. Handle errors
+
+## Special Files
+
+1. page.tsx => for pages
+2. layout.tsx => defining a common layout for our pages
+3. loading.tsx => for showing loading UIs
+4. route.tex => for creating APIs
+5. not-found.tsx => for showing custom errors
+6. error.tsx => showing general custom error pages
