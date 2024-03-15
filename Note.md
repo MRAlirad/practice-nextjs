@@ -8,9 +8,13 @@ We can do **full-stack** development.
 
 A technique that allows us to render our component on the server and send their content to the client. This technique makes our application fast and search-engine friendly.
 
-## Static Site Generation
+## Static Rendering (Static Site Generation)
 
 we can pre-render certain pages and components that have static data when we build our application. We just render them once and serve them whenever they are needed.
+
+## Dynamic Rendering
+
+render components at request time.
 
 ## Routing and Navigation
 
@@ -60,11 +64,18 @@ storing data somewhere that is faster to access. Next.js automatically store the
 2. file system
 3. Network
 
-``` js
-    const res = await fetch('https://jsonplaceholder.typicode.com/users', {
-        cache: 'no-store', // if Data changes frequently
-        next: {
-            revalidate: 10, // get fresh data every 10 seconds
-        }
-    });
+```js
+const res = await fetch('https://jsonplaceholder.typicode.com/users', {
+	cache: 'no-store', // if Data changes frequently
+	next: {
+		revalidate: 10, // get fresh data every 10 seconds
+	},
+});
 ```
+
+## Rendering
+
+1. Client-side
+2. Server-side
+    - Static (at build time)
+    - Dynamic (at request time)
