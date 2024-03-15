@@ -98,3 +98,9 @@ const res = await fetch('https://jsonplaceholder.typicode.com/users', {
 4. route.tex => for creating APIs
 5. not-found.tsx => for showing custom errors
 6. error.tsx => showing general custom error pages
+
+## Dynamic Routes
+
+A Dynamic Route is a route with a parameter.
+
+we crate a folter and wrap the parameter into a [] and create a page file in it => [id]
