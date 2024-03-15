@@ -46,3 +46,8 @@ So we use mixture of SSR and CSR components.
 by Default all component inside the app folder are server components by default.
 
 with **'use client'** directive at the top of the component we can make it client side component. and also all its dependent component.
+
+## Data Fetching
+
+1. client-side
+2. server-side
