@@ -117,7 +117,17 @@ we use layouts to create UI that is shared between multiple pages.
 
 a Layout component should have children of type react node.
 
-### Link
+## Link
 1. Only download the content of the target page
 2. Pre-fetches links that are in the viewport
 3. Caches pages on the client
+
+# Building API
+
+## you'll learn
+
+1. Getting Objects
+2. Creating Objects
+3. Updating Objects
+4. Deleting Objects
+5. Validating requests with Zod
