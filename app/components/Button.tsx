@@ -1,7 +1,10 @@
 'use client';
 
+import { useRouter } from "next/navigation";
+
 const Button = () => {
-	return <button className="btn btn-primary" onClick={() => console.log('wow')}>click on me!</button>;
+	const router = useRouter()
+	return <button className="btn btn-primary" onClick={() => router.push('/users')}>click on me!</button>;
 };
 
 export default Button;
