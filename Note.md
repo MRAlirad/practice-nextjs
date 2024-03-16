@@ -116,3 +116,8 @@ with this approach we should at least give the page a parameters. If we want to 
 we use layouts to create UI that is shared between multiple pages.
 
 a Layout component should have children of type react node.
+
+### Link
+1. Only download the content of the target page
+2. Pre-fetches links that are in the viewport
+3. Caches pages on the client
