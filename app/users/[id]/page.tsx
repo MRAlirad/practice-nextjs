@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 interface Props {
@@ -11,8 +12,10 @@ interface User {
 }
 
 const USerDetailPage = async ({ params: { id } }: Props) => {
+	if (id > 10) notFound();
 	const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
 	const user: User = await res.json();
+
 
 	return <div>USerDetailPage {user.name}</div>;
 };
