@@ -104,3 +104,9 @@ const res = await fetch('https://jsonplaceholder.typicode.com/users', {
 A Dynamic Route is a route with a parameter.
 
 we crate a folter and wrap the parameter into a [] and create a page file in it => [id]
+
+## Catch-all Segments
+
+sometimes we need varying number of parameters in a route so we wrap the parameters in a [] with three-dot at the first => [...slug]
+
+with this approach we should at least give the page a parameters. If we want to make the parameters optional, we wrap them on two [[]] => [[...slug]]
