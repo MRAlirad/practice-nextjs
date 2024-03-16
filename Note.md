@@ -110,3 +110,9 @@ we crate a folter and wrap the parameter into a [] and create a page file in it 
 sometimes we need varying number of parameters in a route so we wrap the parameters in a [] with three-dot at the first => [...slug]
 
 with this approach we should at least give the page a parameters. If we want to make the parameters optional, we wrap them on two [[]] => [[...slug]]
+
+## Layouts
+
+we use layouts to create UI that is shared between multiple pages.
+
+a Layout component should have children of type react node.
