@@ -118,6 +118,7 @@ we use layouts to create UI that is shared between multiple pages.
 a Layout component should have children of type react node.
 
 ## Link
+
 1. Only download the content of the target page
 2. Pre-fetches links that are in the viewport
 3. Caches pages on the client
@@ -131,3 +132,18 @@ a Layout component should have children of type react node.
 3. Updating Objects
 4. Deleting Objects
 5. Validating requests with Zod
+
+the special file for API is **route.tsx**
+
+### Route Handler
+
+a function that handles a http request
+
+### HTML Requests Methods
+
+1. GET => getting data
+2. POST => creating data
+3. PUT => updating data
+3. DELETE => deleting data
+
+## Getting Collection of Objects
