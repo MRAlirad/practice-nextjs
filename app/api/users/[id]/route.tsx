@@ -31,15 +31,38 @@ export async function PUT(request: NextRequest, { params: { id } }: Props) {
 	// Update the user
 	// Return the updated user
 
-	const body = await request.json();
-	const validation = schema.safeParse(body);
+	// const body = await request.json();
+	// const validation = schema.safeParse(body);
 
-	if (!validation.success) return NextResponse.json(validation.error.errors);
+	// if (!validation.success) return NextResponse.json(validation.error.errors);
 	// if (!body.name) return NextResponse.json({ error: 'Name is required' }, { status: 400 });
 
-	if (parseInt(id) > 10) return NextResponse.json({ error: 'User not Found' }, { status: 404 });
+	// if (parseInt(id) > 10) return NextResponse.json({ error: 'User not Found' }, { status: 404 });
 
-	return NextResponse.json({ id: 1, name: body.name });
+	// return NextResponse.json({ id: 1, name: body.name });
+
+	//! Gettin Single User form DataBase
+	const body = await request.json();
+
+	// Validate requested body
+	const validation = schema.safeParse(body);
+	if (!validation.success) return NextResponse.json(validation.error.errors, { status: 400 });
+
+	// Check if user exist
+	const user = await prisma.user.findUnique({
+		where: { id: parseInt(id) },
+	});
+	if (!user) return NextResponse.json({ error: 'User not Found' }, { status: 404 });
+
+	// update the user
+	const updatedUser = await prisma.user.update({
+		where: { id: user.id },
+		data: {
+			name: body.name,
+			email: body.email,
+		},
+	});
+	return NextResponse.json(updatedUser);
 }
 
 export function DELETE(request: NextRequest, { params: { id } }: Props) {
