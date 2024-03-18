@@ -146,4 +146,11 @@ a function that handles a http request
 3. PUT => updating data
 3. DELETE => deleting data
 
-## Getting Collection of Objects
+# Database Integration (with Prisma)
+
+## you'll learn
+
+1. Setting up Prisma
+2. Defining data models
+3. Creating migrations
+4. Performing CRUD operations (create, read, update, delete)
