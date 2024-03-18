@@ -154,3 +154,11 @@ a function that handles a http request
 2. Defining data models
 3. Creating migrations
 4. Performing CRUD operations (create, read, update, delete)
+
+## Prisma
+
+Node.js and TypeScript ORM (object relational mapper)
+
+We use ORM to work with our databases. so an ORM is like a tool that sits between our application and a database.
+
+We use this ORM to send queries to our database and get data back or use it to create, update or delete data.
