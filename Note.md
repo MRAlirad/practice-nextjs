@@ -170,3 +170,6 @@ models are entities of out application domain.
 ## Migrations
 
 Migrations are used to keep out database schema in sync with our prisma schema. (npx prisma migrage dev)
+
+## Prisma Client
+
