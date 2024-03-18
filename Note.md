@@ -144,7 +144,7 @@ a function that handles a http request
 1. GET => getting data
 2. POST => creating data
 3. PUT => updating data
-3. DELETE => deleting data
+4. DELETE => deleting data
 
 # Database Integration (with Prisma)
 
@@ -170,6 +170,3 @@ models are entities of out application domain.
 ## Migrations
 
 Migrations are used to keep out database schema in sync with our prisma schema. (npx prisma migrage dev)
-
-## Prisma Client
-
