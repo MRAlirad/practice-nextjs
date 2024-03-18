@@ -15,11 +15,14 @@ export async function GET(request: NextRequest, { params: { id } }: Props) {
 	// return NextResponse.json({ id: 1, name: 'Json' });
 
 	//! Gettin Single User form DataBase
+
+	// check if user exists
 	const user = await prisma.user.findUnique({
 		where: { id: parseInt(id) },
 	});
-
 	if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 });
+
+	// return the user
 	return NextResponse.json(user);
 }
 
@@ -65,13 +68,28 @@ export async function PUT(request: NextRequest, { params: { id } }: Props) {
 	return NextResponse.json(updatedUser);
 }
 
-export function DELETE(request: NextRequest, { params: { id } }: Props) {
+export async function DELETE(request: NextRequest, { params: { id } }: Props) {
 	// Fetch the user from db
 	// If not found, return 404
 	// Delete the user
 	// Return 200
 
-	if (parseInt(id) > 10) return NextResponse.json({ error: 'User not Found' }, { status: 404 });
+	// if (parseInt(id) > 10) return NextResponse.json({ error: 'User not Found' }, { status: 404 });
+
+	// return NextResponse.json({});
+
+	//! Delete user from database
+
+	// Check if user exists
+	const user = await prisma.user.findUnique({
+		where: { id: parseInt(id) },
+	});
+	if (!user) return NextResponse.json({ error: 'User not Found' }, { status: 404 });
+
+	// delete the user
+	await prisma.user.delete({
+		where: { id: user.id },
+	});
 
 	return NextResponse.json({});
 }
