@@ -166,3 +166,7 @@ We use this ORM to send queries to our database and get data back or use it to c
 ## Definig Models
 
 models are entities of out application domain.
+
+## Migrations
+
+Migrations are used to keep out database schema in sync with our prisma schema. (npx prisma migrage dev)
