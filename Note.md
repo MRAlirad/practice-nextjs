@@ -191,3 +191,14 @@ when a user logs in, NextAuth creates an authenticaiton session for that user. B
 ### middleware
 
 with middleware we can run code before a request is completed. we can create a middleware function that excuted on every request. in that function we can check the user's session, adn if the user is not authenticated, we can redirect them to the login page.
+
+# Optimization
+
+## you'll learn
+
+1. Optimizing images
+2. Using third-party JS libraries
+3. Using custom fonts
+4. Search engine optimization
+5. Lazy loading
+
