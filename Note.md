@@ -185,3 +185,9 @@ Migrations are used to keep out database schema in sync with our prisma schema. 
 ## Authenticaiton Session
 
 when a user logs in, NextAuth creates an authenticaiton session for that user. By default, that session is represented as a JSON web token.
+
+## Protecting Routes
+
+### middleware
+
+with middleware we can run code before a request is completed. we can create a middleware function that excuted on every request. in that function we can check the user's session, adn if the user is not authenticated, we can redirect them to the login page.
