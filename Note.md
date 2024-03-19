@@ -170,3 +170,16 @@ models are entities of out application domain.
 ## Migrations
 
 Migrations are used to keep out database schema in sync with our prisma schema. (npx prisma migrage dev)
+
+# Authentication
+
+## you'll learn
+
+1. Setting up NextAuth => a powerfull authentication library
+2. Configure the Google Provider => people can sign in with their google account
+3. Authentication Sessions
+4. Protecting our routes => so they can only be accessed by authenticated users
+5. Database adapters => to store user data in database
+5. Configuring the Credentials Provider => allow users to sign in with their email and password
+
+## NextAuth
