@@ -209,3 +209,7 @@ with middleware we can run code before a request is completed. we can create a m
 2. beforeIntractive => the script is loaded **before** next js injects any client side code to our pages. This is called **Hydration**. used for scripts that are critical adn should be loaded early on. => bot detectors, cookie consent managers
 3. lazyOnload => the script is loaded **after** all the resources on the page have been fetched. background or low priority scripts that don't nedd to be loaded early on => chat plugins or social media widget
 4. worker
+
+## lazy loading
+
+A strategy for loading client components or third party libraries in the future when we need then, as the result of the user intraction
