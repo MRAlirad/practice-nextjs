@@ -182,4 +182,6 @@ Migrations are used to keep out database schema in sync with our prisma schema. 
 5. Database adapters => to store user data in database
 5. Configuring the Credentials Provider => allow users to sign in with their email and password
 
-## NextAuth
+## Authenticaiton Session
+
+when a user logs in, NextAuth creates an authenticaiton session for that user. By default, that session is represented as a JSON web token.
