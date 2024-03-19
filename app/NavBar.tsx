@@ -25,7 +25,12 @@ const NavBar = () => {
 				{status === 'loading' && (
 					<span className="loading loading-spinner loading-md"></span>
 				)}
-				{status === 'authenticated' && <span>{session.user!.name}</span>}
+				{status === 'authenticated' && (
+					<div className='flex gap-4'>
+						<span>{session.user!.name}</span>
+						<Link href="/api/auth/signout">Sign out</Link>
+					</div>
+				)}
 				{status === 'unauthenticated' && (
 					<Link
 						href="/api/auth/signin"
