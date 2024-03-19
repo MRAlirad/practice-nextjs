@@ -202,3 +202,10 @@ with middleware we can run code before a request is completed. we can create a m
 4. Search engine optimization
 5. Lazy loading
 
+## Using third-party JS libraries
+
+### Script Strategy attrubute
+1. afterIntractive => the script is loaded **after** our page becomes interactive. after next js injects any client side code to our pages. (default value) => tag managers and analytics
+2. beforeIntractive => the script is loaded **before** next js injects any client side code to our pages. This is called **Hydration**. used for scripts that are critical adn should be loaded early on. => bot detectors, cookie consent managers
+3. lazyOnload => the script is loaded **after** all the resources on the page have been fetched. background or low priority scripts that don't nedd to be loaded early on => chat plugins or social media widget
+4. worker

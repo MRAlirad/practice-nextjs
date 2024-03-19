@@ -18,8 +18,8 @@ export default async function Home() {
 				alt="image"
 				width={300}
 				height={170}
-				// sizes="100vw"
-				// quality={100}
+				sizes="100vw"
+				quality={100}
 				priority // for laxy loading images
 			/>
 		</main>
